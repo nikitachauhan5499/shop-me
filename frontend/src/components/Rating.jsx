@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Rating = ({ value, text }) => {
     return (
@@ -25,4 +25,4 @@ const Rating = ({ value, text }) => {
     )
 }
 
-export default Rating
+export default Rating;
