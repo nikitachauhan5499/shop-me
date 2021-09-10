@@ -1,0 +1,22 @@
+{
+  "name": "shop-me",
+  "version": "1.0.0",
+  "description": "MERN stack app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikitachauhan5499/shop-me.git"
+  },
+  "author": "Nikita Chauhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikitachauhan5499/shop-me/issues"
+  },
+  "homepage": "https://github.com/nikitachauhan5499/shop-me#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
