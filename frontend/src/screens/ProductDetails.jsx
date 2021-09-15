@@ -9,7 +9,7 @@ const ProductDetails = ({ match }) => {
     return (
         <div>
             <Link to="/" className="btn">
-                <i class="fas fa-arrow-left"></i>
+                <i className="fas fa-arrow-left"></i>
                 &nbsp; Back
             </Link>
             <Row>
