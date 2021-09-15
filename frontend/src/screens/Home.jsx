@@ -11,7 +11,7 @@ const Home = () => {
             setProducts(data);
         }
         fetchProducts();
-    })
+    }, [])
 
     return (
         <Row>
