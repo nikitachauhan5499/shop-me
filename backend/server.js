@@ -1,24 +1,23 @@
 const express = require('express');
-const products = require('./data/products');
+const { errorHandler } = require('./middlewares/errorMiddleware');
 const dotenv = require('dotenv');
+const connectDb = require('./config/config');
+const productRoutes = require('./routes/productRoutes');
 
-//dotenv configure
+// dotenv configure
 dotenv.config();
 
 const app = express();
+
+// Connecting to  mongodb Database
+connectDb();
 
 app.get('/', (req, res) => {
     res.send('<h1>Welcome to node server</h1>');
 });
 
-app.get('/products', (req, res) => {
-    res.send(products);
-});
-
-app.get('/products/:id', (req, res) => {
-    const product = products.find(p => p._id === req.params.id);
-    res.json(product);
-});
+app.use('/api', productRoutes);
+app.use(errorHandler);
 
 const PORT = 8080;
 app.listen(process.env.PORT || PORT, () => { console.log(`Server running in ${process.env.NODE_ENV} mode on port: ${process.env.PORT}`)});
