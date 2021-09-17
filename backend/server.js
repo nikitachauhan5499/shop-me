@@ -1,5 +1,5 @@
 const express = require('express');
-const products = require('./data/products');
+const { errorHandler } = require('./middlewares/errorMiddleware');
 const dotenv = require('dotenv');
 const connectDb = require('./config/config');
 const productRoutes = require('./routes/productRoutes');
@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', productRoutes);
+app.use(errorHandler);
 
 const PORT = 8080;
 app.listen(process.env.PORT || PORT, () => { console.log(`Server running in ${process.env.NODE_ENV} mode on port: ${process.env.PORT}`)});
