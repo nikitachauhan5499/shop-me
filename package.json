@@ -29,6 +29,11 @@
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "mongoose": "^6.0.6",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "react-hooks": "^1.0.1",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
   }
 }
